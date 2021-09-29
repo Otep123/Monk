@@ -45,10 +45,10 @@ public class Monk : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             RaycastHit2D hit = Physics2D.Raycast(rigidbody2D.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));  //Stores the result of the raycast
-                                                                                                                                            //rigidbody2d.pos is Ruby's feet, Vector2.up * 0.2 is an offset to her center
+                                                                                                                                            //rigidbody2d.pos is Monk's feet, Vector2.up * 0.2 is an offset to his center
                                                                                                                                             //raycast is 1.5f units long
                                                                                                                                             //Tests only the "NPC" layer
-            /*if (hit.collider != null)   //Checks if the raycast actually hit something
+            if (hit.collider != null)   //Checks if the raycast actually hit something
             {
                 NonPlayableCharacter npc = hit.collider.GetComponent<NonPlayableCharacter>(); //Gets the collider's NPC script
                 if (npc != null)
@@ -56,7 +56,7 @@ public class Monk : MonoBehaviour
                     npc.DisplayDialogue();
                 }
             }
-            */
+            
         }
     }
 
