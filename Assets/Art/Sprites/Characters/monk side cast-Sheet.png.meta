@@ -38,6 +38,27 @@ TextureImporter:
   - first:
       213: 9004643425403754349
     second: monk side cast-Sheet_11
+  - first:
+      213: -8418946066073795026
+    second: monk side cast-Sheet_12
+  - first:
+      213: -4874592260709391699
+    second: monk side cast-Sheet_13
+  - first:
+      213: -7415783849074248077
+    second: monk side cast-Sheet_14
+  - first:
+      213: -7573561843435542962
+    second: monk side cast-Sheet_15
+  - first:
+      213: -7330190707786210951
+    second: monk side cast-Sheet_16
+  - first:
+      213: 4674720719461406932
+    second: monk side cast-Sheet_17
+  - first:
+      213: 4413498383316429355
+    second: monk side cast-Sheet_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -386,6 +407,153 @@ TextureImporter:
       bones: []
       spriteID: d675f3c9c7be6fc70800000000000000
       internalID: 9004643425403754349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk side cast-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 12
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26cf7c8825e92b80800000000000000
+      internalID: -8418946066073795026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk side cast-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 12
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da26c836a28f95cb0800000000000000
+      internalID: -4874592260709391699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk side cast-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 12
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376b9d831e7d51990800000000000000
+      internalID: -7415783849074248077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk side cast-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 12
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46629d31ad45e690800000000000000
+      internalID: -7573561843435542962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk side cast-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 12
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971a886636ee54a90800000000000000
+      internalID: -7330190707786210951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk side cast-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 12
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8d7a30ab1ffd040800000000000000
+      internalID: 4674720719461406932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk side cast-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 12
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a265a5565ef3d30800000000000000
+      internalID: 4413498383316429355
       vertices: []
       indices: 
       edges: []

@@ -22,9 +22,12 @@ public class Monk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!animator.GetBool("Casting"))
+        {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
-
+        }
+        
         Vector2 move = new Vector2(horizontal, vertical);
 
         if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f)) //Checks if move vector has any value in it, if it does then Monk prob moved
@@ -40,7 +43,7 @@ public class Monk : MonoBehaviour
         //Input
         if (Input.GetKeyDown(KeyCode.E))
         {
-            animator.SetBool("Casting", true);
+            animator.SetBool("Casting", true); 
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -63,6 +66,9 @@ public class Monk : MonoBehaviour
     void CastSpell()
     {
         GameObject FireBurstObject = Instantiate(fireBurstPrefab, rigidbody2D.position + Vector2.up * 0.2f, Quaternion.identity);
+        Vector2 pos = rigidbody2D.position;
+        pos.x = pos.x + speed * 0.1f * Time.deltaTime;
+        rigidbody2D.MovePosition(pos);
     }
 
     void FixedUpdate()
@@ -71,6 +77,6 @@ public class Monk : MonoBehaviour
         pos.x = pos.x + speed * horizontal * Time.deltaTime;
         pos.y = pos.y + speed * vertical * Time.deltaTime;
 
-        rigidbody2D.MovePosition(pos);
+        if (!animator.GetBool("Casting"))rigidbody2D.MovePosition(pos);
     }
 }
