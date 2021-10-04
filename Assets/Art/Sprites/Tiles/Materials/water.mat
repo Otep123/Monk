@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: water
-  m_Shader: {fileID: 4800000, guid: e260cfa7296ee7642b167f1eb5be5023, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: c01edf6e258ee75439cc1a57b74b8533, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_b568df66185445618641fce0f92a02fa:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -35,9 +39,34 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_73081ca05e5a40beaf71abc4d2577dc6_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_19d689e5633a4e8e9ffa58bd34b9f5c1: 0
+    - Vector1_768affb6ea204c66b8ee9559ceda4b60: 500
+    - Vector1_cd5ed28e9742491f8e239cb3a7ccd69b: 0
     - _EnableExternalAlpha: 0
     m_Colors:
+    - Vector2_57614275658b4d1a82989f0f5244a10b: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_e9332e9725c34f52af4acbc5c5f74d46: {r: 0, g: 0, b: 0, a: 0}
+    - Vector3_07d9206a8ee6453ab6d51953de5a6244: {r: -1, g: 0, b: 0, a: 0}
+    - Vector3_1953701ef37242889d8641c0b0697c9a: {r: 0, g: 0, b: 0, a: 0}
+    - Vector3_bd57336e006e41209e54350e13a2c406: {r: 0, g: 0, b: 0, a: 0}
+    - Vector3_c85cf65023cd49908b79115d3daf52d3: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
