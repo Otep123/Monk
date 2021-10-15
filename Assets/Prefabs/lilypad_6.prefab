@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: -10
   m_Sprite: {fileID: -5304395030221455683, guid: fa57687ee2fd2e64285c0d7958c1b2c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   localPosition: {x: 0, y: -0.25, z: 0}
   localRotation: {x: 0, y: 0, z: 0}
   localScaler: {x: 1, y: -1, z: 0}
-  sprite: {fileID: -5304395030221455683, guid: fa57687ee2fd2e64285c0d7958c1b2c8, type: 3}
+  sprite: {fileID: 0}
   spriteLayer: TransparentFX
   spriteLayerOrder: -31
+  applyShader: 0

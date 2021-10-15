@@ -21,27 +21,27 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -7543558128349134509, guid: cc594b886b792634399db20a8c697720, type: 3}
-    - time: 0.083333336
+    - time: 0.07692308
       value: {fileID: 3952658231555953923, guid: cc594b886b792634399db20a8c697720, type: 3}
-    - time: 0.16666667
+    - time: 0.15384616
       value: {fileID: 2925587358529137179, guid: cc594b886b792634399db20a8c697720, type: 3}
-    - time: 0.25
+    - time: 0.23076923
       value: {fileID: -1170905938533139237, guid: cc594b886b792634399db20a8c697720, type: 3}
-    - time: 0.33333334
+    - time: 0.30769232
       value: {fileID: -1676733165772875603, guid: cc594b886b792634399db20a8c697720, type: 3}
-    - time: 0.41666666
+    - time: 0.3846154
       value: {fileID: -6373967330026553981, guid: cc594b886b792634399db20a8c697720, type: 3}
-    - time: 0.5
+    - time: 0.46153846
       value: {fileID: 2827788585808932684, guid: cc594b886b792634399db20a8c697720, type: 3}
-    - time: 0.5833333
+    - time: 0.53846157
       value: {fileID: -438372108099913463, guid: cc594b886b792634399db20a8c697720, type: 3}
-    - time: 0.6666667
+    - time: 0.61538464
       value: {fileID: -3360167795802447436, guid: cc594b886b792634399db20a8c697720, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 12
+  m_SampleRate: 13
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -70,7 +70,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.75
+    m_StopTime: 0.6923077
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -89,4 +89,32 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.15384616
+    functionName: boxColliderResize
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 2
+    messageOptions: 0
+  - time: 0.23076923
+    functionName: boxColliderResize
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 3
+    messageOptions: 0
+  - time: 0.30769232
+    functionName: boxColliderResize
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 4
+    messageOptions: 0
+  - time: 0.46153846
+    functionName: removeCollider
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

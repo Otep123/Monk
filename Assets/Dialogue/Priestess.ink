@@ -11,14 +11,18 @@
     ==MainQuestions==
     + [Where am I?]         ->Where
     + [Who are you?]        ->Who
+    + [What is this place?] ->placeDesc
     + [Can you heal me?]    ->Heal
     + [Nevermind.]          ->END
     
     ==Where==
-    I...don't remember. This is why I'm praying to [GODS], to help me remember. Maybe you would know?
+    I'm not exactly sure, but I can feel like I know this place somehow. This is why I'm praying to [GODS], to help me remember. Maybe you would know?
         ->WhereQuestions
     ==Who==
     I...don't remember... I think I am the priestess of this temple? Leave me be please, if you have no further questions.
+        ->MainQuestions
+    ==placeDesc==
+    It's a...temple of some kind? As of now I'm still wrapping my head on how I got here in the first place, but it's really beatiful! Which is troubling, because that would mean I'm dead and this is heaven. 
         ->MainQuestions
     ==Heal==
     ...What? I don't know how to heal. Even if I did, I don't heal random strangers.

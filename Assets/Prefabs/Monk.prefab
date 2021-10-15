@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 745362018024411246}
   - component: {fileID: 745362018024411245}
   - component: {fileID: 3377044209792003322}
-  m_Layer: 0
+  - component: {fileID: 8491676269945677625}
+  - component: {fileID: 1238004278772967104}
+  m_Layer: 7
   m_Name: Monk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6857055380819353453, guid: 0cee29823491e0d4ca3299d1d9969537, type: 3}
+  m_Sprite: {fileID: -6686169918042835359, guid: a150da3d21b30ae44a7328e230dd02f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,8 +101,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52dcb4c2a89503e49a3c98b040df1f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  health: 5
+  speed: 4.5
+  stunTime: 1
+  fireBurstRecoilTime: 0.1
   fireBurstPrefab: {fileID: 8753275234327837036, guid: 91cb0e1bbccafa54b9810aa8919fbce6, type: 3}
+  dustWalkPrefab: {fileID: 1923543673330360385, guid: e688ce4851e197248894f37a75fe10f2, type: 3}
+  dust2WalkPrefab: {fileID: 7840226333775727868, guid: 926e4443cb2ac7645b2b348be4e84f32, type: 3}
 --- !u!50 &745362018024411246
 Rigidbody2D:
   serializedVersion: 4
@@ -118,9 +125,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &745362018024411245
 Animator:
@@ -154,7 +161,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.030879103, y: 0.22606884}
+  m_Offset: {x: -0.04, y: 0.16}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -165,8 +172,39 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4177186, y: 0.3100641}
+  m_Size: {x: 0.3, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &8491676269945677625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745362018024411234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674ed7027cea3954ea502bf5fa2820fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localPosition: {x: 0, y: -0.25, z: 0}
+  localRotation: {x: 0, y: 0, z: 0}
+  localScaler: {x: 1, y: -1, z: 0}
+  sprite: {fileID: 0}
+  spriteLayer: TransparentFX
+  spriteLayerOrder: -31
+  applyShader: 0
+--- !u!114 &1238004278772967104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745362018024411234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f12588a67acb95479c00f2786d81258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5739952077979514860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -225,6 +263,10 @@ PrefabInstance:
     - target: {fileID: 817330597584163924, guid: 06014932aaa05954f8349e2aefeb74cb, type: 3}
       propertyPath: m_Name
       value: shadow
+      objectReference: {fileID: 0}
+    - target: {fileID: 817330597584163924, guid: 06014932aaa05954f8349e2aefeb74cb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06014932aaa05954f8349e2aefeb74cb, type: 3}
