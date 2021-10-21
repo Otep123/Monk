@@ -5,7 +5,7 @@
 + [(Leave her alone)]  ->END
 
 ==Intro==
-..I am in deep prayer. What do you want?
+...Oh! A monk! What do you want?
     ->MainQuestions
     
     ==MainQuestions==
@@ -22,10 +22,10 @@
     I...don't remember... I think I am the priestess of this temple? Leave me be please, if you have no further questions.
         ->MainQuestions
     ==placeDesc==
-    It's a...temple of some kind? As of now I'm still wrapping my head on how I got here in the first place, but it's really beatiful! Which is troubling, because that would mean I'm dead and this is heaven. 
+    It's a...temple of some kind? As of now I'm still wrapping my head on how I got here in the first place, but it's really beatiful! I might stay here a while.
         ->MainQuestions
     ==Heal==
-    ...What? I don't know how to heal. Even if I did, I don't heal random strangers.
+    ...What? I don't know how to heal. Even if I did, I don't "heal" random strangers.
         ->MainQuestions
         
         ==WhereQuestions==

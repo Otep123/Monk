@@ -19,7 +19,7 @@ public class WaterReflectableScript : MonoBehaviour
     public string spriteLayer = "TransparentFX";
     public int spriteLayerOrder = -31;
     public bool applyShader = false;
-
+    
     private SpriteRenderer spriteSource;
     private SpriteRenderer spriteRenderer;
   

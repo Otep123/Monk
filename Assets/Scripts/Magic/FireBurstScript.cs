@@ -17,7 +17,7 @@ public class FireBurstScript : MonoBehaviour
 
     void Update()
     {
-        Vector2 forceDirection = new Vector2(1,0);
+        Vector2 forceDirection = new Vector2(0.5f,-0.5f);
         rigidBody2d.AddForce(forceDirection);
 
     }
@@ -45,12 +45,12 @@ public class FireBurstScript : MonoBehaviour
                 size.Set(3.9f,1f);
                 break;
             case 3:
-                offset.Set(5.7f, 0.9f);
-                size.Set(4.7f, 1.2f);
+                offset.Set(5.57f, 0.8f);
+                size.Set(4.47f, 0.96f);
                 break;
             case 4:
-                offset.Set(5.7f, 1.3f);
-                size.Set(4.77f, 2.5f);
+                offset.Set(5.7f, 0.81f);
+                size.Set(4.77f, 1.5f);
                 break;
         }
         collider2D.size = size;

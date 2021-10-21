@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 745362018024411246}
   - component: {fileID: 745362018024411245}
   - component: {fileID: 3377044209792003322}
-  - component: {fileID: 8491676269945677625}
-  - component: {fileID: 1238004278772967104}
+  - component: {fileID: 299576392}
   m_Layer: 7
   m_Name: Monk
   m_TagString: Untagged
@@ -83,7 +82,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.6, y: 0.75}
+  m_Size: {x: 0.75, y: 0.9375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102,9 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  speed: 4.5
-  stunTime: 1
-  fireBurstRecoilTime: 0.1
+  speed: 6
   fireBurstPrefab: {fileID: 8753275234327837036, guid: 91cb0e1bbccafa54b9810aa8919fbce6, type: 3}
   dustWalkPrefab: {fileID: 1923543673330360385, guid: e688ce4851e197248894f37a75fe10f2, type: 3}
   dust2WalkPrefab: {fileID: 7840226333775727868, guid: 926e4443cb2ac7645b2b348be4e84f32, type: 3}
@@ -161,20 +158,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04, y: 0.16}
+  m_Offset: {x: -0.035966396, y: 0.21807626}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.75, y: 0.9375}
-    newSize: {x: 0.6, y: 0.75}
+    newSize: {x: 0.75, y: 0.9375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.2}
+  m_Size: {x: 0.36614132, y: 0.3161525}
   m_EdgeRadius: 0
---- !u!114 &8491676269945677625
+--- !u!114 &299576392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,28 +180,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 745362018024411234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 674ed7027cea3954ea502bf5fa2820fb, type: 3}
+  m_Script: {fileID: 11500000, guid: cc2797842c0e32042a4ad471da640674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localPosition: {x: 0, y: -0.25, z: 0}
-  localRotation: {x: 0, y: 0, z: 0}
-  localScaler: {x: 1, y: -1, z: 0}
-  sprite: {fileID: 0}
-  spriteLayer: TransparentFX
-  spriteLayerOrder: -31
-  applyShader: 0
---- !u!114 &1238004278772967104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745362018024411234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f12588a67acb95479c00f2786d81258, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  delayTime: 0.075
+  durationTime: 1
 --- !u!1001 &5739952077979514860
 PrefabInstance:
   m_ObjectHideFlags: 0

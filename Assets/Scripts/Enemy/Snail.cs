@@ -8,6 +8,7 @@ public class Snail : MonoBehaviour
     public float speed;
     public bool vertical = true;
     public float changeTime = 1.0f;
+    public GameObject dustExplosionPrefab;
 
     Rigidbody2D rigidbody2D;
     float timer;
@@ -64,7 +65,7 @@ public class Snail : MonoBehaviour
         rigidbody2D.MovePosition(position);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionStay2D(Collision2D other)
     {
         Monk player = other.gameObject.GetComponent<Monk>();
 
@@ -72,15 +73,19 @@ public class Snail : MonoBehaviour
         {
             player.ChangeHealth(-1);
         }
+    }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         direction = -direction;
         if (RandomBool()) vertical = !vertical;
     }
 
     public void Damage()
     {
-        if (health<=0)
+        if (health<1)
         {
+            GameObject dustExplosionObject = Instantiate(dustExplosionPrefab, rigidbody2D.position, transform.rotation * Quaternion.identity);
             GameObject.Destroy(gameObject);
         }
         health--;

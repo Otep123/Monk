@@ -6,21 +6,27 @@ public class Monk : MonoBehaviour
 {
     public float health = 5.0f;
     public float speed = 3.0f;
-    public float fireBurstRecoilTime = 1f;
-    public float fireBurstRecoilSpeed = 1f;
     public GameObject fireBurstPrefab;
     public GameObject dustWalkPrefab;
     public GameObject dust2WalkPrefab;
 
     float orig_speed;
+    float angle;
     float horizontal;
     float vertical;
     float dustOffset = 0.9f;
+    bool spellEnd;
 
     FlashDamage flashDamage;
     Rigidbody2D rigidbody2D;
     Animator animator;
-    Vector2 lookDirection = new Vector2(1, 0);
+
+    enum Facing
+    {
+        N, S, W, E, NW, NE, SW, SE
+    }
+
+    private Facing playerFacing = Facing.E; 
 
     // Start is called before the first frame update
     void Start()
@@ -34,44 +40,60 @@ public class Monk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector2 move = new Vector2();
+        Vector3 playerPixelPos = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 mousePos = Input.mousePosition;
+
+        Vector3 direction = (mousePos - playerPixelPos).normalized;
         if (!animator.GetBool("Casting"))
         {
             horizontal = Input.GetAxis("Horizontal");
             vertical = Input.GetAxis("Vertical");
-        }
-        
-        Vector2 move = new Vector2(horizontal, vertical);
 
-        if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f)) //Checks if move vector has any value in it, if it does then Monk prob moved
-        {
-            lookDirection.Set(move.x, move.y);
-            lookDirection.Normalize();
+            move = new Vector2(horizontal, vertical);
+            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         }
-
-        animator.SetFloat("LookX", lookDirection.x);
-        animator.SetFloat("LookY", lookDirection.y);
         animator.SetFloat("Speed", move.magnitude);
+        //Up
+        if (angle >= 45 && angle <= 135)
+        {
+            playerFacing = Facing.N;
+            animator.SetFloat("LookY", 0.5f);
+            animator.SetFloat("LookX", 0f);
+        }
+        //Down
+        else if (angle >= -135 && angle <= -45)
+        {
+            playerFacing = Facing.S;
+            animator.SetFloat("LookY", -0.5f);
+            animator.SetFloat("LookX", 0f);
+        }
+        //Right
+        if (angle >= -45 && angle <= 45)
+        {
+            playerFacing = Facing.E;
+            animator.SetFloat("LookX", 0.5f);
+            animator.SetFloat("LookY", 0f);
+        }
+        //Left
+        else if (angle >= 135 && angle <= 180 || angle >= -180 && angle <= -135)
+        {
+            playerFacing = Facing.W;
+            animator.SetFloat("LookX", -0.5f);
+            animator.SetFloat("LookY", 0f);
+        }
 
         //Input
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetMouseButtonDown(0))
         {
-            speed = speed * 1.5f;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            speed = orig_speed;
+            if (!animator.GetBool("Casting")) {
+                //CastFireBurst();
+                animator.SetBool("Casting", true);
+            }
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            animator.SetBool("Casting", true); 
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            flashDamage.SetFlash(true);
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            RaycastHit2D hit = Physics2D.Raycast(rigidbody2D.position + Vector2.up * 0.1f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));  //Stores the result of the raycast
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2D.position + Vector2.up * 0.1f, direction, 1.5f, LayerMask.GetMask("NPC"));  //Stores the result of the raycast
                                                                                                                                             //rigidbody2d.pos is Monk's feet, Vector2.up * 0.2 is an offset to his center
                                                                                                                                             //raycast is 1.5f units long
                                                                                                                                             //Tests only the "NPC" layer
@@ -83,7 +105,7 @@ public class Monk : MonoBehaviour
                     npc.DisplayDialogue();
                 }
             }
-            
+          
         }
     }
 
@@ -145,23 +167,30 @@ public class Monk : MonoBehaviour
         }
     }
 
-    void CastFireBurst(int flip)
+    void CastFireBurst()
     {
-        //If flip is 1 or more, spell is flipped
-        if (flip>0) 
+        if (animator.GetBool("Casting"))
         {
-            GameObject FireBurstObject = Instantiate(fireBurstPrefab,
-                rigidbody2D.position + Vector2.up * 0.2f,
-                transform.rotation * Quaternion.Euler(0f, 180f, 0f)
+            if (angle > 90 || angle < -90)
+            {
+                GameObject fireburst = Instantiate(fireBurstPrefab,
+                    rigidbody2D.position + Vector2.up * 0.2f,
+                    transform.rotation * Quaternion.Euler(0f, 0f, angle)
                 );
-        }
-        //If flip is less than or equal to 0, spell is not flipped
-        else
-        {
-            GameObject FireBurstObject = Instantiate(fireBurstPrefab,
-                rigidbody2D.position + Vector2.up * 0.2f,
-                transform.rotation * Quaternion.identity
+                fireburst.transform.localScale = new Vector3(fireburst.transform.localScale.x, -1);
+            }
+            else
+            {
+                GameObject fireburst = Instantiate(fireBurstPrefab,
+                    rigidbody2D.position + Vector2.up * 0.2f,
+                    transform.rotation * Quaternion.Euler(0f, 0f, angle)
                 );
-        }
+            }
+        }  
+    }
+
+    void Stop()
+    {
+        animator.SetBool("Casting", false);
     }
 }
