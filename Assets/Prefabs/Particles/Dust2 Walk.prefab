@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5963134162758365847}
   - component: {fileID: 6000337670930966442}
   - component: {fileID: 5247455968426972961}
+  - component: {fileID: -1664049544651487368}
   m_Layer: 0
   m_Name: Dust2 Walk
   m_TagString: Untagged
@@ -102,3 +103,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1664049544651487368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7840226333775727868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674ed7027cea3954ea502bf5fa2820fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localPosition: {x: 0, y: -0.25, z: 0}
+  localRotation: {x: 0, y: 0, z: 0}
+  localScaler: {x: 1, y: -1, z: 0}
+  sprite: {fileID: 0}
+  spriteLayer: TransparentFX
+  spriteLayerOrder: -31
+  applyShader: 0

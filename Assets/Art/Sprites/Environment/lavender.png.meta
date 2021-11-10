@@ -120,10 +120,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 34
+        height: 40
+      alignment: 9
+      pivot: {x: 0.511125, y: 0.22104022}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,12 +139,12 @@ TextureImporter:
       name: lavender_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 0
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 34
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5111251, y: 0.21394801}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
