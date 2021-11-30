@@ -39,6 +39,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1460650779
+    locked: 0
+  - name: Shadow
+    uniqueID: 3319546797
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tree
+    uniqueID: 1361484801
+    locked: 0
+  - name: Wildlife
+    uniqueID: 2116322749
+    locked: 0
+  - name: NonPlayableCharacters
+    uniqueID: 3788680753
     locked: 0

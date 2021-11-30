@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: jewelCrownAnimator
+  m_Controller: {fileID: 9100000, guid: dc84e7aaabc80a14ca484898b3458e56, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 68f50088d4c13824a94ef62802f95783, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 42a8064c2ae719d48a352a96d2282447, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 99782514bc858e54eae5a1c4374e96a5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: eb6b6439deb44ff429bef6e51e387719, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 748b54985a4b1554fa0c3dd2220fd31a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 97e277e6dd341f9479f066fc7e1979c7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e214de613419c8c4f9647afd7ab97262, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f65964b3fa41fee429475068c3f2c4c5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 430a1c03dabbe1f42ada0ea25d354d25, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6b32a4f9d58a9b74fb6d5bef482965db, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 869f3ea79bfd90b4f95cf78ce98d17cc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6b32a4f9d58a9b74fb6d5bef482965db, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5f53de3cc9d2fb94daf0dcc2e4f97d78, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e72297260a3614c4ba49d7f5225b1fe2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a7d210051ec019b4f86779704dd9be33, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e72297260a3614c4ba49d7f5225b1fe2, type: 2}

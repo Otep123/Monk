@@ -21,6 +21,7 @@ public class Monk : MonoBehaviour
     Rigidbody2D rigidbody2D;
     Animator animator;
 
+    Vector2 move = new Vector2();
     enum Facing
     {
         N, S, W, E, NW, NE, SW, SE
@@ -40,7 +41,6 @@ public class Monk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 move = new Vector2();
         Vector3 playerPixelPos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 mousePos = Input.mousePosition;
 

@@ -273,7 +273,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: monk_side_walk_0
+  m_Name: Monk Controller Original
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: LookX

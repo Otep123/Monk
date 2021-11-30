@@ -325,8 +325,16 @@ PrefabInstance:
       value: Lantern (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6127981573325314338, guid: a1e58c32bf471d14ea64dab89bdd87b6, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127981573325314338, guid: a1e58c32bf471d14ea64dab89bdd87b6, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127981573325314338, guid: a1e58c32bf471d14ea64dab89bdd87b6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1361484801
       objectReference: {fileID: 0}
     - target: {fileID: 6127981573325314338, guid: a1e58c32bf471d14ea64dab89bdd87b6, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -338,11 +346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6766509305425959119, guid: a1e58c32bf471d14ea64dab89bdd87b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 6766509305425959119, guid: a1e58c32bf471d14ea64dab89bdd87b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.72
+      value: 4.04
       objectReference: {fileID: 0}
     - target: {fileID: 6766509305425959119, guid: a1e58c32bf471d14ea64dab89bdd87b6, type: 3}
       propertyPath: m_LocalPosition.z
