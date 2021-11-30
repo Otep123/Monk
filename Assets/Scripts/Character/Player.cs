@@ -37,6 +37,23 @@ public class Player : Character
             isSprinting = false;
             movementSpeedEdit = movementSpeed;
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2D.position + Vector2.up * 0.1f, direction, 2.5f, LayerMask.GetMask("NPC"));  //Stores the result of the raycast
+                                                                                                                                            //rigidbody2d.pos is Monk's feet, Vector2.up * 0.2 is an offset to his center
+                                                                                                                                            //raycast is 1.5f units long
+                                                                                                                                            //Tests only the "NPC" layer
+            if (hit.collider != null)   //Checks if the raycast actually hit something
+            {
+                NonPlayableCharacter npc = hit.collider.GetComponent<NonPlayableCharacter>(); //Gets the collider's NPC script
+                if (npc != null)
+                {
+                    npc.DisplayDialogue();
+                }
+            }
+          
+        }
     }
 
     void FixedUpdate()

@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public characterType type;
-    public enum characterType
-    {
-        NPC,
-        PLAYER,
-        ENEMY
-    }
     public float movementSpeed = 4;
+
     protected Rigidbody2D rigidbody2D;
     [HideInInspector]
     public Vector2 move;

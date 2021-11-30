@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1818041676388153363}
   - component: {fileID: 1818041676388153361}
   - component: {fileID: 1818041676388153362}
+  - component: {fileID: 9087593870847871279}
   m_Layer: 0
   m_Name: Monk
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818041676388153360}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -52.963005, y: 2.4747398, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -53,7 +54,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -69,11 +70,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fdaa73c8b76a1c4d90713cb6a123c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
+  movementSpeed: 5
+  dustWalkPrefab: {fileID: 0}
+  dust2WalkPrefab: {fileID: 0}
   move: {x: 0, y: 0}
   horizontal: 0
   vertical: 0
   isSprinting: 0
-  movementSpeedOriginal: 8
+  direction: {x: 0, y: 0, z: 0}
+--- !u!210 &9087593870847871279
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818041676388153360}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &6943147051747393849
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,9 +158,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -975420499
-  m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 58a53c15b78939645b394a27a01e02bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -211,6 +227,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: neutralFaceLargeNose_FrontIdle_0
       objectReference: {fileID: 0}
+    - target: {fileID: 3196823875839990456, guid: 711669bb2d5cd7541a30b7345912f2eb, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196823875839990456, guid: 711669bb2d5cd7541a30b7345912f2eb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196823875839990456, guid: 711669bb2d5cd7541a30b7345912f2eb, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 711669bb2d5cd7541a30b7345912f2eb, type: 3}
 --- !u!4 &1818041676522048395 stripped
@@ -273,6 +301,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5693907096300926499, guid: 77c7c3740ec6da94eaa7d7d52281d2d1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693907096300926499, guid: 77c7c3740ec6da94eaa7d7d52281d2d1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693907096300926499, guid: 77c7c3740ec6da94eaa7d7d52281d2d1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77c7c3740ec6da94eaa7d7d52281d2d1, type: 3}
 --- !u!4 &1818041677317265997 stripped
@@ -287,6 +327,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1818041676388153363}
     m_Modifications:
+    - target: {fileID: 3007406825834549495, guid: 2d4f019b4137c7e408f90828bb01bac2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007406825834549495, guid: 2d4f019b4137c7e408f90828bb01bac2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007406825834549495, guid: 2d4f019b4137c7e408f90828bb01bac2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3585931038026806170, guid: 2d4f019b4137c7e408f90828bb01bac2, type: 3}
       propertyPath: m_RootOrder
       value: 2

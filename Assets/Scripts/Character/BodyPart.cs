@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BodyPart : MonoBehaviour
 {
+    public GameObject dustWalkPrefab;
+    public GameObject dust2WalkPrefab;
     float angle;
     Character parentCharacter;
 
@@ -77,5 +79,82 @@ public class BodyPart : MonoBehaviour
         animator.SetFloat("MovementSpeed", parentCharacter.move.magnitude);
     }
 
-    
+    void SpawnDustWalk(int flip)
+    {
+        float dustOffset = 0.9f;
+        Vector2 pos = transform.position;
+        if (flip>0)
+        {
+            GameObject DustWalkObject = Instantiate(dustWalkPrefab,
+                pos + Vector2.right * dustOffset,
+                transform.rotation * Quaternion.Euler(0f, 180f, 0f)
+            );
+        }
+        else
+        {
+            GameObject DustWalkObject = Instantiate(dustWalkPrefab,
+                pos + Vector2.left * dustOffset,
+                transform.rotation * Quaternion.identity
+            );
+        }
+    }
+
+    void SpawnDustKickUp(int flip) {
+        float dustOffset = Random.Range(0.1f, 1f);
+        if (Random.Range(1,10) >= 4) {
+            Vector2 pos = transform.position;
+            if (flip>0)
+            {
+                GameObject DustWalkObject = Instantiate(dust2WalkPrefab,
+                    pos + Vector2.right * dustOffset,
+                    transform.rotation * Quaternion.Euler(0f, 180f, 0f)
+                );
+            }
+            else
+            {
+                GameObject DustWalkObject = Instantiate(dust2WalkPrefab,
+                    pos + Vector2.left * dustOffset,
+                    transform.rotation * Quaternion.identity
+                );
+            }
+        }
+        else {
+            Vector2 pos = transform.position;
+            if (flip>0)
+            {
+                GameObject DustWalkObject = Instantiate(dustWalkPrefab,
+                    pos + Vector2.right * dustOffset,
+                    transform.rotation * Quaternion.Euler(0f, 180f, 0f)
+                );
+            }
+            else
+            {
+                GameObject DustWalkObject = Instantiate(dustWalkPrefab,
+                    pos + Vector2.left * dustOffset,
+                    transform.rotation * Quaternion.identity
+                );
+            }
+        }
+    }
+
+    void SpawnDust2Walk(int flip)
+    {
+        float dustOffset = 0.9f;
+        Vector2 pos = transform.position;
+        if (flip>0)
+        {
+            GameObject DustWalkObject = Instantiate(dust2WalkPrefab,
+                pos + Vector2.right * dustOffset,
+                transform.rotation * Quaternion.Euler(0f, 180f, 0f)
+            );
+        }
+        else
+        {
+            GameObject DustWalkObject = Instantiate(dust2WalkPrefab,
+                pos + Vector2.left * dustOffset,
+                transform.rotation * Quaternion.identity
+            );
+        }
+    }
 }
+

@@ -7,7 +7,7 @@ public class NonPlayableCharacter : Character
     public GameObject canvas;
     public float maxIdleDistance = 4;
     public bool isFollowingPlayer;
-    public GameObject playerCharacter;
+    private GameObject playerCharacter;
     private GameObject portraitImage;
     private DialogueManager dialogue;
     private bool isShowing;
@@ -18,13 +18,13 @@ public class NonPlayableCharacter : Character
     void Start()
     {
         //canvas = GameObject.FindGameObjectWithTag("Canvas");
-        //dialogue = canvas.GetComponent<DialogueManager>();
+        dialogue = canvas.GetComponent<DialogueManager>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         move = new Vector2();
         direction = new Vector2();
         targetPos = new Vector3();
         movementSpeedEdit = movementSpeed;
-        this.type = characterType.NPC;
+        playerCharacter = GameObject.Find("/Characters/NonPlayableCharacter/Player");
     }
 
     void Update() 
@@ -46,6 +46,7 @@ public class NonPlayableCharacter : Character
             Vector3 moveTowardsPos = Vector3.MoveTowards(transform.position, targetPos, movementSpeedEdit * Time.deltaTime);
             rigidbody2D.MovePosition(moveTowardsPos);
             float currentDistance = Vector3.Distance(transform.position, targetPos);
+            //Stopping
             if (currentDistance < maxIdleDistance && movementSpeedEdit > 0) {
                 movementSpeedEdit -= 0.1f;
                 if (movementSpeedEdit <= 0) {
@@ -53,13 +54,17 @@ public class NonPlayableCharacter : Character
                     move.Set(0,0);
                 }
             }
+            //Normal Speed
             else if (currentDistance >= maxIdleDistance) {
+                isSprinting = false;
                 move.Set(moveTowardsPos.x,moveTowardsPos.y);
                 if (movementSpeedEdit < movementSpeed) {
-                    movementSpeedEdit += 0.1f;
+                    movementSpeedEdit += 0.2f;
+                }
+                else if (movementSpeedEdit > movementSpeed) {
+                    movementSpeedEdit -= 0.2f;
                 }
             }
-            Debug.Log(move);
             //StartCoroutine(MoveToSpot(playerCharacter.transform.position, movementSpeed));
         }
     }

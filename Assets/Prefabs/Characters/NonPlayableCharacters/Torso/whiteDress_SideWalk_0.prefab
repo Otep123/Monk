@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -506286543
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 3918906653043426882, guid: 667e3fe0bbb2f774bb0a8d2c34ec269a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -115,3 +115,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30728824fa10cc4297a1cef4645427b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dustWalkPrefab: {fileID: 1923543673330360385, guid: e688ce4851e197248894f37a75fe10f2, type: 3}
+  dust2WalkPrefab: {fileID: 7840226333775727868, guid: 926e4443cb2ac7645b2b348be4e84f32, type: 3}
