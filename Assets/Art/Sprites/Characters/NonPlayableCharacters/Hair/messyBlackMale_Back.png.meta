@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 8c74f7405299e4743bcc260fbc693f53
+guid: 9db57c61069886343a796717292e13a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4130814629968258322
-    second: messyBlackMale_Side_0
+      213: 4394054697494751214
+    second: messyBlackMale_Back_0
   - first:
-      213: -1098895431127562848
-    second: messyBlackMale_Side_1
+      213: -3404690906175721336
+    second: messyBlackMale_Back_1
   - first:
-      213: -6088370616141879327
-    second: messyBlackMale_Side_2
+      213: 6892536225244765370
+    second: messyBlackMale_Back_2
   - first:
-      213: -4296329948926455315
-    second: messyBlackMale_Side_3
+      213: 199290567314604172
+    second: messyBlackMale_Back_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: messyBlackMale_Side_0
+      name: messyBlackMale_Back_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 19
-        height: 25
+        width: 20
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 215ae3c150a935930800000000000000
-      internalID: 4130814629968258322
+      spriteID: ee7afc77771dafc30800000000000000
+      internalID: 4394054697494751214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: messyBlackMale_Side_1
+      name: messyBlackMale_Back_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 20
         y: 0
-        width: 19
-        height: 25
+        width: 20
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a587567d60ffb0f0800000000000000
-      internalID: -1098895431127562848
+      spriteID: 880b46fd8ab10c0d0800000000000000
+      internalID: -3404690906175721336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: messyBlackMale_Side_2
+      name: messyBlackMale_Back_2
       rect:
         serializedVersion: 2
-        x: 38
+        x: 40
         y: 0
-        width: 19
-        height: 25
+        width: 20
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e7efe3ae23c18ba0800000000000000
-      internalID: -6088370616141879327
+      spriteID: abcd93bbd2537af50800000000000000
+      internalID: 6892536225244765370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: messyBlackMale_Side_3
+      name: messyBlackMale_Back_3
       rect:
         serializedVersion: 2
-        x: 57
+        x: 60
         y: 0
-        width: 19
-        height: 25
+        width: 20
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de1dd54acae5064c0800000000000000
-      internalID: -4296329948926455315
+      spriteID: c808fdf07b504c200800000000000000
+      internalID: 199290567314604172
       vertices: []
       indices: 
       edges: []
